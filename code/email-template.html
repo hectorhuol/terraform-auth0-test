@@ -1,0 +1,94 @@
+<html>
+  <head>
+    <style type="text/css">
+      .ExternalClass,.ExternalClass div,.ExternalClass font,.ExternalClass p,.ExternalClass span,.ExternalClass td,img {line-height: 100%;}#outlook a {padding: 0;}.ExternalClass,.ReadMsgBody {width: 100%;}a,blockquote,body,li,p,table,td {-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;}table,td {mso-table-lspace: 0;mso-table-rspace: 0;}img {-ms-interpolation-mode: bicubic;border: 0;height: auto;outline: 0;text-decoration: none;}table {border-collapse: collapse !important;}#bodyCell,#bodyTable,body {height: 100% !important;margin: 0;padding: 0;font-family: ProximaNova, sans-serif;}#bodyCell {padding: 20px;}#bodyTable {width: 600px;}@font-face {font-family: ProximaNova;src: url(https://cdn.auth0.com/fonts/proxima-nova/proximanova-regular-webfont-webfont.eot);src: url(https://cdn.auth0.com/fonts/proxima-nova/proximanova-regular-webfont-webfont.eot?#iefix)format("embedded-opentype"),url(https://cdn.auth0.com/fonts/proxima-nova/proximanova-regular-webfont-webfont.woff) format("woff");font-weight: 400;font-style: normal;}@font-face {font-family: ProximaNova;src: url(https://cdn.auth0.com/fonts/proxima-nova/proximanova-semibold-webfont-webfont.eot);src: url(https://cdn.auth0.com/fonts/proxima-nova/proximanova-semibold-webfont-webfont.eot?#iefix)format("embedded-opentype"),url(https://cdn.auth0.com/fonts/proxima-nova/proximanova-semibold-webfont-webfont.woff) format("woff");font-weight: 600;font-style: normal;}@media only screen and (max-width: 480px) {#bodyTable,body {width: 100% !important;}a,blockquote,body,li,p,table,td {-webkit-text-size-adjust: none !important;}body {min-width: 100% !important;}#bodyTable {max-width: 600px !important;}#signIn {max-width: 280px !important;}}
+    </style>
+  </head>
+  <body>
+    <center>
+      <table
+        style='width: 700px;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;margin: 0;padding: 0;font-family: "ProximaNova", sans-serif;border-collapse: collapse !important;height: 100% !important;'
+        align="center"
+        border="0"
+        cellpadding="0"
+        cellspacing="0"
+        height="100%"
+        width="100%"
+        id="bodyTable"
+      >
+        <tr>
+          <td
+            align="left"
+            valign="top"
+            id="bodyCell"
+            style='-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;margin: 0;padding: 20px;font-family: "ProximaNova", sans-serif;height: 100% !important; font-size: 1.1em'
+          >
+            {% if user.user_metadata.isInvited == true %}
+                <div class="main">
+                <p
+                  style="text-align: left;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%; margin-bottom: 30px;"
+                >
+                  <img
+                    src="https://www.sonatype.com/hubfs/2021%20Brand%20System/Sonatype_Press_Kit/Sonatype_logo_full_color.jpg"
+                    width="40%"  
+                    alt="Sonatype"
+                    style="-ms-interpolation-mode: bicubic;border: 0;height: auto;line-height: 100%;outline: none;text-decoration: none;"
+                  />
+                </p>
+                <p>Hello</p>
+                <br/>
+                <p>You are just one step away from using Sonatype SaaS platform.</p>
+                <p>Set your password <a href="{{ url }}">here</a>. This link will expire in 5 days.</p>
+                <p>For added MFA security, you will be prompted to configure
+                  <a href="https://auth0.com/docs/secure/multi-factor-authentication/multi-factor-authentication-factors/configure-otp-notifications-for-mfa">your preferred authenticator app</a>.
+                  Choose your authenticator app to secure your account with one-time passwords and start developing software fearlessly!
+                </p>
+                <p><strong>IMPORTANT: If you or anyone in your organization did not make this request, please contact support@sonatype.com.<strong/></p>
+                <br/>
+                <p>Sincerely,</p>
+                <p>Your friends at Sonatype.</p>
+                <br/>
+                <hr style="border: 2px solid #EAEEF3; border-bottom: 0; margin: 20px 0;" />
+                <p style="text-align: center;color: #A9B3BC;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;">
+                  Sonatype Inc. https://support.sonatype.com.
+                </p>
+              </div>
+            {% else %}
+              <div class="main">
+                <p
+                  style="text-align: left;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%; margin-bottom: 30px;"
+                >
+                  <img
+                    src="https://www.sonatype.com/hubfs/2021%20Brand%20System/Sonatype_Press_Kit/Sonatype_logo_full_color.jpg"
+                    width="40%"  
+                    alt="Sonatype"
+                    style="-ms-interpolation-mode: bicubic;border: 0;height: auto;line-height: 100%;outline: none;text-decoration: none;"
+                  />
+                </p>
+ 
+                <h1>Password Change Request</h1>
+ 
+                <p>You have submitted a password change request.</p>
+ 
+                <p>
+                  If it wasn't you please disregard this email and make sure you can still login to your account. If it
+                  was you, then <strong>confirm the password change <a href="{{ url }}">click here</a></strong
+                  >.
+                </p>
+ 
+                <br />
+                Thanks!
+ 
+                <br /><br />
+                <hr style="border: 2px solid #EAEEF3; border-bottom: 0; margin: 20px 0;" />
+                <p style="text-align: center;color: #A9B3BC;-webkit-text-size-adjust: 100%;-ms-text-size-adjust: 100%;">
+                  Sonatype Inc. https://support.sonatype.com.
+                </p>
+              </div>
+            {% endif %}           
+          </td>
+        </tr>
+      </table>
+    </center>
+  </body>
+</html>
